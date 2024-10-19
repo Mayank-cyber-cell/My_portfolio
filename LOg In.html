@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <h1>Log In</h1>
+    <form action="otp.html" id="login-form"> <!-- Update action to link to otp.html -->
+        <div>
+            <label for="phone">Phone No.</label>
+            <input id="phone" type="tel" placeholder="Enter your Number" maxlength="10" required>
+            <br>
+        </div>
+        <div>
+            <button type="submit" id="otp-button">Send One Time Password</button> <!-- Removed the anchor tag -->
+        </div>
+        <div><pre>           or           </pre></div>
+        <div>
+            <button type="button">Login With Gmail</button>
+        </div>
+        <div>
+            <a href="Sign Up.html">
+                <button type="button">Sign in With Email</button>
+            </a>
+        </div>
+    </form>
+    <script src="login.js"></script>
+</body>
+</html>

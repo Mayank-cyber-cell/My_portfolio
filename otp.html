@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <link rel="stylesheet" href="otp.css">
+</head>
+
+<body>
+    <div class="container"> <!-- Added container for centering -->
+        <div>
+            <h1>OTP Verification</h1>
+        </div>
+        <div>
+            <p>
+                <h2>Check text messages for your OTP</h2>
+            </p>
+        </div>
+        <form action="zomatoclone.html">
+            <div class="user">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+                <input maxlength="1" pattern="[a-zA-Z0-9]{1}" inputmode="text" type="text" class="otp-box">
+            </div>
+            <div>
+                <button type="submit" id="otp-button">Confirm</button>
+            </div>
+            <!-- Timer positioned above "Resend Now" -->
+            <h2><span id="timer"></span></h2>
+            <h2>Not received OTP? | <span id="resend">Resend Now</span></h2>
+        </form>
+    </div>
+    <script src="otp.js"></script>
+</body>
+
+</html>

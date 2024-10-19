@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #514c4c; /* Dark background color */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.container {
+    width: 70%; /* Width of the rectangle (1.75/4 of the page) */
+    max-width: 600px; /* Max width for larger screens */
+    padding: 40px; /* Padding around the content */
+    background-color: rgba(255, 255, 255, 0.95); /* White background with slight transparency */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+h1, h2 {
+    color: #333; /* Dark text color for headings */
+}
+
+.user {
+    margin-top: 20px;
+}
+
+.otp-box {
+    width: 50px; /* Set square width */
+    height: 50px; /* Set square height */
+    margin: 5px;
+    font-size: 24px;
+    text-align: center;
+    border: 2px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(158, 148, 148, 0.3); /* Shadow for the input boxes */
+    transition: border-color 0.3s ease;
+}
+
+.otp-box:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    outline: none;
+}
+
+#otp-button {
+    background-color: #007BFF; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button text size */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+#otp-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#timer {
+    color: rgb(8, 2, 47); /* Red text for timer */
+    font-weight: bold;
+}
+
+#resend {
+    color: rgb(0, 0, 0); /* Blue text for "Resend Now" */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+#resend:hover {
+    text-decoration: underline; /* Underline on hover */
+}

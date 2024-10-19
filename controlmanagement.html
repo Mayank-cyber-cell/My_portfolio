@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Management System Showcase</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        /* Header */
+        header {
+            background-color: #007acc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        /* Hero Section */
+        .hero {
+            background-image: url('cms.jpg');
+            background-size: cover;
+            color: #e5ff00;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        /* Features Section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .feature {
+            background-color: #ffffff;
+            border: 1px solid #fff6f6;
+            border-radius: 5px;
+            width: 30%;
+            margin: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .feature h3 {
+            margin-top: 0;
+        }
+        /* Demo Section */
+        .demo {
+            text-align: center;
+            padding: 40px;
+            background-color: #eaeaea;
+            margin: 20px 0;
+        }
+        .demo button {
+            padding: 10px 20px;
+            background-color: #007acc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .demo button:hover {
+            background-color: #005f99;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Content Management System Showcase</h1>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Manage Your Content Effortlessly</h2>
+        <p>A powerful platform for creating and managing digital content.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature">
+            <h3>Easy to Use</h3>
+            <p>Our CMS is user-friendly, allowing anyone to create and manage content without technical knowledge.</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable</h3>
+            <p>Personalize your CMS with various themes and plugins to suit your needs.</p>
+        </div>
+        <div class="feature">
+            <h3>SEO Friendly</h3>
+            <p>Optimized for search engines to help your content reach a wider audience.</p>
+        </div>
+        <div class="feature">
+            <h3>Responsive Design</h3>
+            <p>Access your CMS on any device with our fully responsive design.</p>
+        </div>
+        <div class="feature">
+            <h3>Multi-User Access</h3>
+            <p>Collaborate with team members using our multi-user functionality.</p>
+        </div>
+        <div class="feature">
+            <h3>Analytics</h3>
+            <p>Gain insights into your content performance with built-in analytics.</p>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo">
+        <h2>Try Our CMS</h2>
+        <p>Experience the features firsthand. Click below to start a demo!</p>
+        <button onclick="startDemo()">Start Demo</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Content Management System Showcase. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animation -->
+    <script>
+        const features = document.querySelectorAll('.feature');
+        const demoButton = document.querySelector('.demo button');
+
+        // Function to animate features on load
+        function animateFeatures() {
+            features.forEach((feature, index) => {
+                setTimeout(() => {
+                    feature.style.opacity = '1';
+                    feature.style.transform = 'translateY(0)';
+                }, index * 200); // Stagger the animations
+            });
+        }
+
+        // Function for demo button
+        function startDemo() {
+            alert('Demo started!'); // Placeholder for demo functionality
+        }
+
+        // Call the animation function when the page loads
+        window.onload = animateFeatures;
+    </script>
+
+</body>
+</html>

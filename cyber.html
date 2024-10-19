@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Blogs & Thoughts</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #eaeaea;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00ff00; /* Green for a techy look */
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: #2a2a2a;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Blog Posts Section */
+        .blog-posts {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #444;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(20px); /* Start slightly lower for animation */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .blog-post h3 {
+            color: #00ff00;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2a2a2a;
+            color: #eaeaea;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Cybersecurity Blogs & Thoughts</h1>
+        <p>Insights into the world of cybersecurity, hacking, and technology.</p>
+    </header>
+
+    <!-- Blog Posts Section -->
+    <section class="blog-posts">
+        <h2>Latest Blog Posts</h2>
+
+        <div class="blog-post" id="post1">
+            <h3>The Importance of Strong Passwords</h3>
+            <p>In today's digital age, having a strong password is your first line of defense against cyber threats. Learn how to create and manage passwords securely.</p>
+            <a href="cyber/strongpass.html">Read More</a>
+        </div>
+
+        <div class="blog-post" id="post2">
+            <h3>Understanding Phishing Attacks</h3>
+            <p>Phishing is a common tactic used by cybercriminals to steal sensitive information. Discover how to recognize and avoid phishing scams.</p>
+            <a href="cyber/phishing.html">Read More</a>
+        </div>
+
+        <div class="blog-post" id="post3">
+            <h3>Best Practices for Secure Online Browsing</h3>
+            <p>Keeping your data safe while browsing online is crucial. This post outlines essential practices for a secure browsing experience.</p>
+            <a href="cyber/secure.html">Read More</a>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Cybersecurity Blog. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Function to reveal blog posts with animation
+        function revealPosts() {
+            const posts = document.querySelectorAll('.blog-posts > .blog-post');
+            posts.forEach((post, index) => {
+                setTimeout(() => {
+                    post.style.opacity = '1'; // Set opacity to 1
+                    post.style.transform = 'translateY(0)'; // Reset transform
+                }, index * 300); // Stagger the animations
+            });
+        }
+
+        // Call the function on page load
+        window.onload = function() {
+            revealPosts();
+        };
+    </script>
+
+</body>
+</html>

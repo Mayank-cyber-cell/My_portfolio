@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #eaeaea;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #00ff00; /* Green for a techy look */
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 20px;
+            text-align: justify;
+        }
+
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: #2a2a2a;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(50px); /* Start slightly lower for animation */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2a2a2a;
+            color: #eaeaea;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+        }
+
+        /* Animation */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Phishing Awareness</h1>
+        <p>Learn to recognize and avoid phishing scams.</p>
+    </header>
+
+    <!-- Content Section -->
+    <section class="content">
+        <h2>What is Phishing?</h2>
+        <p>Phishing is a common tactic used by cybercriminals to steal sensitive information, such as usernames, passwords, and credit card details. They do this by masquerading as trustworthy entities in electronic communications.</p>
+
+        <h2>How to Recognize Phishing Scams</h2>
+        <p>Here are some common signs of phishing attempts:</p>
+        <ul>
+            <li>Unsolicited emails or messages from unknown senders.</li>
+            <li>Requests for sensitive information or urgent action.</li>
+            <li>Generic greetings instead of personalized ones.</li>
+            <li>Suspicious links or attachments in emails.</li>
+            <li>Poor grammar or spelling mistakes.</li>
+        </ul>
+
+        <h2>How to Avoid Phishing Scams</h2>
+        <p>To protect yourself from phishing attacks, consider the following tips:</p>
+        <ul>
+            <li>Always verify the sender's email address.</li>
+            <li>Hover over links to see the actual URL before clicking.</li>
+            <li>Do not provide sensitive information in response to unsolicited requests.</li>
+            <li>Use security software to protect your devices.</li>
+            <li>Stay informed about the latest phishing tactics.</li>
+        </ul>
+
+        <p>For more information, visit <a href="https://www.consumer.ftc.gov/articles/how-recognize-and-avoid-phishing-scams" target="_blank">FTC's Guide on Phishing</a>.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Cybersecurity Awareness. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Function to reveal content with animation
+        function revealContent() {
+            const content = document.querySelector('.content');
+            content.style.opacity = '1'; // Set opacity to 1
+            content.style.transform = 'translateY(0)'; // Reset transform
+        }
+
+        // Call the function on page load
+        window.onload = function() {
+            revealContent();
+        };
+    </script>
+
+</body>
+</html>

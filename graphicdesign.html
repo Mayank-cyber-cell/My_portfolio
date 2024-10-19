@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Design | Portfolio</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #000000;
+        }
+        p {
+            line-height: 1.6;
+            margin: 20px;
+            text-align: center;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Hero Section */
+        .hero {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        /* Future of Graphic Design Section */
+        .future {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+        .future h2 {
+            color: #000000;
+        }
+        .future p {
+            text-align: left;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Projects Section */
+        .projects {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+        .projects h2 {
+            margin-bottom: 40px;
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .project {
+            background-color: #fff;
+            width: 30%;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .project h3 {
+            color: #007acc;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 0.9rem;
+        }
+        .project a {
+            margin-top: 10px;
+            display: inline-block;
+            background-color: #007acc;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .project a:hover {
+            background-color: #005f99;
+        }
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2px 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 1000px) {
+            .project {
+                width: 45%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .project {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1><marquee behavior="a" direction="left">Graphic Design: Where Creativity Meets Technology</marquee></h1>
+        <p>Explore the innovative world of graphic design and its impact on branding.</p>
+    </section>
+
+    <!-- Future of Graphic Design Section -->
+    <section class="future">
+        <h2>The Future of Graphic Design</h2>
+        <p>Graphic design is evolving with the integration of AI and data-driven design strategies. The focus is shifting towards personalized and user-centric experiences, enabling brands to connect more effectively with their audiences. As technology advances, graphic designers are exploring new mediums, such as AR and VR, creating immersive experiences that redefine visual communication.</p>
+        <p>The demand for skilled graphic designers continues to grow as businesses recognize the importance of strong visual identities and branding. With opportunities across various sectors, from advertising to digital media, graphic design remains a crucial element of successful marketing strategies.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <h2>Recent Graphic Design Projects</h2>
+        <div class="project-list">
+            <div class="project">
+                <h3>Brand Identity Design</h3>
+                <p>Created a comprehensive brand identity for a startup, including logo design, color palette, and typography guidelines.</p>
+                <a href="graphic design parts/brand_identity.html">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Social Media Campaign</h3>
+                <p>Designed engaging visuals for a social media marketing campaign, enhancing audience interaction and brand visibility.</p>
+                <a href="graphic design parts/socialmedia.html">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Infographic Design</h3>
+                <p>Developed informative infographics to simplify complex data for corporate presentations and online content.</p>
+                <a href="graphic design parts/infographic.html">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Mayank Shah. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Animate project elements when they scroll into view
+        function animateProjects() {
+            const projects = document.querySelectorAll('.project');
+            const screenPosition = window.innerHeight / 1.3;
+
+            projects.forEach(project => {
+                const projectPosition = project.getBoundingClientRect().top;
+                if (projectPosition < screenPosition) {
+                    project.style.opacity = '1';
+                    project.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateProjects);
+        window.addEventListener('load', animateProjects);
+    </script>
+
+</body>
+</html>

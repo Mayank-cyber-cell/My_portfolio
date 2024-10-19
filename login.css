@@ -1,0 +1,84 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+input[type="tel"]:focus {
+    border-color: #ff6347;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #ff6347;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e04b3f;
+}
+
+/* Divider for 'or' */
+pre {
+    text-align: center;
+    color: #999;
+}
+
+/* Link button styling */
+a button {
+    background-color: #fff;
+    color: #ff6347;
+    border: 1px solid #ff6347;
+}
+
+a button:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
